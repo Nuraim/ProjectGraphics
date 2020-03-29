@@ -1,11 +1,11 @@
 tolerance = .4; 
-// Create rails for slider
+
 linear_extrude(100, convexity = 5) intersection() {
 square([80, 20], center = true);
 for(i = [0, 1]) mirror([i, 0, 0]) translate([20, 0, 0]) rotate(-45)
 square(100);
 }
-// Create the base
+
 difference() {
 linear_extrude(25, convexity = 5) square([80, 20], center = true);
 rotate_extrude(convexity = 5, $fn = 24) difference() {
